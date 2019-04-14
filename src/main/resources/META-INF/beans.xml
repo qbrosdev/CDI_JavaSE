@@ -1,0 +1,45 @@
+<!--this is the old address for deployment descriptor file address
+http://java.sun.com/xml/ns/javaee it dose not support some tags
+this is the new address (for java EE7) http://xmlns.jcp.org/xml/ns/javaee/
+Each Java EE XML Schema document's file name contains the specific version of the related specification.
+This is introduced for convenience to locate specific versions of the schema documents.
+However, Deployment Descriptor instances are not required to refer to a specific file.
+Instead, an instance must specify the version of the corresponding specification by using the "version" attribute.
+For example, servlet Deployment Descriptor instances that must be processed with the servlet 3.1 version must
+indicate the version within the version attribute of the instance document, for example, "3.1".
+The Deployment Descriptor processors use the version information to choose the appropriate version of the schema
+document(s) to process the Deployment Descriptor instances
+
+LINK: https://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html  -->
+
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd"
+        bean-discovery-mode="all">
+
+    <!--If an application uses more than one interceptor, the interceptors are invoked in the order specified in the
+    beans.xml file. The interceptors that you specify in the beans.xml file apply only to classes in the same archive.
+    Use the @Priority annotation to specify interceptors globally for an application that consists of
+    multiple modules:
+    @Priority(Interceptor.Priority.APPLICATION)
+    Interceptors with lower priority values are called first. You do not need to specify the interceptor in the
+     beans.xml file when you use the @Priority annotation-->
+    <interceptors>
+        <class>interceptor.interceptorImple</class>
+    </interceptors>
+
+    <decorators>
+        <class>decorator.ServiceVATDecorator</class>
+    </decorators>
+
+    <alternatives>
+        <class>alternative.AlternativeImplementation</class>
+    </alternatives>
+</beans>
+
+<!--xml schema loading process (defined in schema location):the XML parser will firstly try to load the schema from
+internet, if not found or internet access is not available, it will search *.xsd file locally
+from class path (project dependencies), if still not found, it will be omitted.
+
+ Link: https://stackoverflow.com/a/28098405/3593084-->

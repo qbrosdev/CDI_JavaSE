@@ -1,0 +1,4 @@
+Decorators and Interceptors are similar because they can be both used to "enrich" or "decorate" one method call
+with additional tasks. However Interceptors are used for general tasks, which are not related with your class in
+ particular (e.g. auditing). On the other hand, Decorators, do bear with them the Bean attributes/operations
+ so they can actually specialize or override a specific business functionality

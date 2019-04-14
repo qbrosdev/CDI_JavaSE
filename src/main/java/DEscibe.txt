@@ -1,0 +1,7 @@
+https://www.javacodegeeks.com/2013/04/java-ee-cdi-producer-methods-tutorial.html
+
+https://deltaspike.apache.org/documentation/modules.html
+
+
+////cdi with producers:
+https://dzone.com/articles/cdi-and-the-produces-annotation-for-factory

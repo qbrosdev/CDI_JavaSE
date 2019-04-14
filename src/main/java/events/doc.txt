@@ -1,0 +1,18 @@
+http://www.next-presso.com/2014/06/you-think-you-know-everything-about-cdi-events-think-again/
+
+To observe an event you’ll have to add an "observer method" in an enable bean (bean should be alive)
+of your application.
+
+An observer method is a method whose "first parameter" has the @Observes annotation.
+Off course qualifier may be added to the observer to restrict event triggering.
+The observer method may have other beans as parameters.
+
+Unlike java, CDI understands parameter "type erasure".
+
+For instance take these 2 observer methods:
+
+public void processNumberList(@Observes List<Number> event) {...}
+
+public void processIntegerList(@Observes List<Integer> event) {...}
+
+The container will make the distinction between both when resolving observer depending of the parameterized type of the event.

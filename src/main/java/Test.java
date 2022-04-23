@@ -1,9 +1,4 @@
-
 import alternative.AlternativeContext;
-import decorator.DecoContext;
-import events.EventTester;
-import interceptor.ContextInt;
-import lazyInit.Context;
 import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.WeldContainer;
 import qualifier.Main;

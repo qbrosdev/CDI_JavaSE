@@ -6,7 +6,7 @@ package decorator;
  */
 public class VAtService {
 
-    public void computeVAT(){
+    public void computeVAT() {
         System.out.println(" Computing VAT");
     }
 }

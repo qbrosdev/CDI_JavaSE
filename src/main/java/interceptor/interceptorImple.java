@@ -7,7 +7,8 @@ import java.io.Serializable;
 
 /**
  * And now will code the Interceptor definition, which bears the qualifier annotation
- * (@InterceptorQualifier) at the top of it */
+ * (@InterceptorQualifier) at the top of it
+ */
 
 
 @InterceptorQualifier
@@ -27,7 +28,7 @@ public class interceptorImple implements Serializable {
     and throws an Exception. It can call InvocationContext methods.
     The @AroundInvoke method must call the proceed method, which causes the target class method to be invoked. */
     @AroundInvoke
-    public Object logMethodEntry(InvocationContext ctx) throws Exception{
+    public Object logMethodEntry(InvocationContext ctx) throws Exception {
         System.out.println("Before entering method:" + ctx.getMethod().getName());
         return ctx.proceed();
     }

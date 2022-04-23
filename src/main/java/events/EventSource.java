@@ -11,7 +11,7 @@ public class EventSource {
     @Inject
     private Event<String> simpleMessageEvent;
 
-    public void fireEvent(){
+    public void fireEvent() {
         simpleMessageEvent.fire("Hello");
     }
 }

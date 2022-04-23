@@ -12,11 +12,11 @@ document(s) to process the Deployment Descriptor instances
 
 LINK: https://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html  -->
 
-<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://xmlns.jcp.org/xml/ns/javaee"
        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 		http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd"
-        bean-discovery-mode="all">
+       bean-discovery-mode="all">
 
     <!--If an application uses more than one interceptor, the interceptors are invoked in the order specified in the
     beans.xml file. The interceptors that you specify in the beans.xml file apply only to classes in the same archive.
@@ -38,8 +38,8 @@ LINK: https://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html 
     </alternatives>
 </beans>
 
-<!--xml schema loading process (defined in schema location):the XML parser will firstly try to load the schema from
-internet, if not found or internet access is not available, it will search *.xsd file locally
-from class path (project dependencies), if still not found, it will be omitted.
+        <!--xml schema loading process (defined in schema location):the XML parser will firstly try to load the schema from
+        internet, if not found or internet access is not available, it will search *.xsd file locally
+        from class path (project dependencies), if still not found, it will be omitted.
 
- Link: https://stackoverflow.com/a/28098405/3593084-->
+         Link: https://stackoverflow.com/a/28098405/3593084-->

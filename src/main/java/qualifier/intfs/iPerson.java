@@ -7,6 +7,8 @@ package qualifier.intfs;
 public interface iPerson {
 
     void sayName();
+
     void sayGender();
+
     void sayOccupation();
 }

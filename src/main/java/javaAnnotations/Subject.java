@@ -12,6 +12,5 @@ public class Subject {
     @CustomAnnotation
     String name;
 
-
     String type;
 }

@@ -16,7 +16,7 @@ public class Main {
     @VisaPaymentQualifier
     private iPayment payment;
 
-    public void run(){
+    public void run() {
         workPlace.getMsJill().sayName();
         workPlace.getMrJack().sayName();
         payment.pay(new BigDecimal("123"));

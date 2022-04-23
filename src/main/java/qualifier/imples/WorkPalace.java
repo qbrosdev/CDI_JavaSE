@@ -14,10 +14,12 @@ public class WorkPalace {
      */
 
     @Inject
-    private @Named("Ms.JILL") iPerson msJill;
+    private @Named("Ms.JILL")
+    iPerson msJill;
 
     @Inject
-    private @Named("MrJACK") iPerson mrJack;
+    private @Named("MrJACK")
+    iPerson mrJack;
 
     public iPerson getMsJill() {
         return msJill;

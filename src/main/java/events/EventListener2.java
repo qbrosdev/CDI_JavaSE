@@ -7,7 +7,7 @@ import javax.enterprise.event.Observes;
  */
 public class EventListener2 {
 
-    public void observeEvent(@Observes String message){
-        System.out.println("EL2"+ message);
+    public void observeEvent(@Observes String message) {
+        System.out.println("EL2" + message);
     }
 }

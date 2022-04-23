@@ -9,6 +9,15 @@ import java.util.Map;
  */
 public class AnnotationProcessor {
 
+    private static String getSerializedKey(Field field) {
+        String annotationValue = field.getAnnotation(CustomAnnotation.class).annotationValue();
+        if (annotationValue.isEmpty()) {
+            return field.getName();
+        } else {
+            return annotationValue;
+        }
+    }
+
     public String processAnnotatedClass(Object object) {
         try {
             Class<?> objectClass = (object).getClass();
@@ -26,15 +35,5 @@ public class AnnotationProcessor {
             System.out.println("access exception");
         }
         return "";
-    }
-
-    private static String getSerializedKey(Field field) {
-        String annotationValue = field.getAnnotation(CustomAnnotation.class).annotationValue();
-        if (annotationValue.isEmpty()) {
-            return field.getName();
-        }
-        else {
-            return annotationValue;
-        }
     }
 }

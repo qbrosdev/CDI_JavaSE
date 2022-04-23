@@ -14,7 +14,7 @@ public class EventTester {
     @Inject
     EventSource eventSource;
 
-    public void doTest(){
+    public void doTest() {
         eventSource.fireEvent();
     }
 }

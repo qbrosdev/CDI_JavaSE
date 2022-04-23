@@ -1,20 +1,18 @@
 package lazyInit;
 
-/**
- * Created by QBros on Zero Hour ... Hooah!
- */
+
 public class VeryHeavyObjToCreate {
+
+    private String value;
 
     public VeryHeavyObjToCreate() {
         try {
-            Thread.sleep(14000L);
+            Thread.sleep(20000L);
             setValue("value");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
-
-    private String value;
 
     public String getValue() {
         return value;

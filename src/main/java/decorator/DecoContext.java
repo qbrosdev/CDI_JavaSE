@@ -11,7 +11,7 @@ public class DecoContext {
     @Inject
     iService iService;
 
-    public void callService(){
+    public void callService() {
         iService.provideService();
     }
 }

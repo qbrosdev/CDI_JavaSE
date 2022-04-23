@@ -1,4 +1,0 @@
-Decorators and Alternatives are similar as well because they can be used to provide different implementations for
-your use cases. However Alternative beans can be used to provide a whole different bean implementation,
-while decorators can be used to further specialize a single method/attribute and they allow as well interacting
-with the method/attribute we are going to specialize.

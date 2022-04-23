@@ -2,11 +2,11 @@ package javaAnnotations;
 
 /**
  * 1.SOURCE: annotation retained only in the source file and is discarded during compilation.
-
- 2.CLASS: annotation stored in the .class file during compilation, not available in the run time.
- Appear in the decompiled class, but can't be inspected at run-time with reflection with getAnnotations()
-
- 3.RUNTIME: annotation stored in the .class file and available in the run time.
+ * <p>
+ * 2.CLASS: annotation stored in the .class file during compilation, not available in the run time.
+ * Appear in the decompiled class, but can't be inspected at run-time with reflection with getAnnotations()
+ * <p>
+ * 3.RUNTIME: annotation stored in the .class file and available in the run time.
  */
 
 import java.lang.annotation.ElementType;

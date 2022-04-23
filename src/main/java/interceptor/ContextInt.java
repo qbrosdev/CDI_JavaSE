@@ -10,7 +10,7 @@ public class ContextInt {
     @Inject
     Intercepted intercepted;
 
-    public void testInterception(){
+    public void testInterception() {
         intercepted.thisMethodWillBeIntercepted();
     }
 }

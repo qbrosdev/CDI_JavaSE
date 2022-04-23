@@ -11,7 +11,7 @@ public class AlternativeContext {
     @Inject
     iService service;
 
-    public void callService(){
+    public void callService() {
         service.performService();
     }
 }
